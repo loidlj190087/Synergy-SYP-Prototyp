@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34219.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPoolManager", "CarPoolManager\CarPoolManager.csproj", "{EA1AD284-D6AC-45C5-8B3E-7157334107AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDbLib", "CarDbLib\CarDbLib.csproj", "{3B82775D-F513-4D80-863B-1D0DF17EC457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA1AD284-D6AC-45C5-8B3E-7157334107AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1AD284-D6AC-45C5-8B3E-7157334107AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1AD284-D6AC-45C5-8B3E-7157334107AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1AD284-D6AC-45C5-8B3E-7157334107AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B82775D-F513-4D80-863B-1D0DF17EC457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B82775D-F513-4D80-863B-1D0DF17EC457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B82775D-F513-4D80-863B-1D0DF17EC457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B82775D-F513-4D80-863B-1D0DF17EC457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E4B2BDE-09DF-4BE6-9FA8-1556D8DF41D1}
+	EndGlobalSection
+EndGlobal
