@@ -4,14 +4,15 @@
     "frameworks": [
       {
         "name": "Microsoft.NETCore.App",
-        "version": "8.0.0-rc.2.23479.6"
+        "version": "8.0.0"
       },
       {
         "name": "Microsoft.WindowsDesktop.App",
-        "version": "8.0.0-rc.2.23479.10"
+        "version": "8.0.0"
       }
     ],
     "configProperties": {
+      "System.Reflection.NullabilityInfoContext.IsSupported": true,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true
     }
   }

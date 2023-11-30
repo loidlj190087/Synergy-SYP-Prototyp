@@ -9,5 +9,12 @@
         public string Color { get; set; }
         public string NumberPlate { get; set; }
         public int Milage { get; set; }
+        public List<Booking> Bookings { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"{Make} {Model} {YearOfManufacture} {NumberPlate}";
+        }
     }
 }
