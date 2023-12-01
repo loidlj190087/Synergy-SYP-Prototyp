@@ -1,12 +1,11 @@
 ﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using CarDbLib;
 namespace CarPoolManager;
 
 public partial class MainWindow : Window
 {
-    DatabaseContext _db = new DatabaseContext();
+    DatabaseContext _db;
 
     public List<Car> Cars { get; set; } = new();
     public MainWindow() => InitializeComponent();
@@ -14,14 +13,10 @@ public partial class MainWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         _db = new DatabaseContext();
-
         //_db.Database.EnsureDeleted();
         _db.Database.EnsureCreated();
-
-        //ReadCSV_Cars();
-        //ReadCSV_Bookings();
-
-
+        cboMakes.ItemsSource = _db.Cars.Select(x => x.Make).OrderBy(x => x).ToList();
+        cboMakes.SelectedIndex = 0;
         FillGrdWithCars();
     }
 
@@ -75,7 +70,7 @@ public partial class MainWindow : Window
 
     public void FillGrdWithCars()
     {
-        grdCars.ItemsSource = _db.Cars.ToList();
+        
     }
 
     //public void FillGrdWithCars()
