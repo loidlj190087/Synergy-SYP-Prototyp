@@ -5,18 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarPoolManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="CarPoolManager" Height="450" Width="800"
         Loaded="Window_Loaded">
     <Grid>
-        <Border Visibility="Visible" BorderThickness="2" BorderBrush="Blue" CornerRadius="8">
-            <StackPanel Margin="3">
-                <Label  Height="25" Content="E V G" Background="LightSkyBlue" />
-                <ComboBox Name="cboMakes" Width="150" Margin="10" HorizontalAlignment="Left"/>
-                <Separator Height="5"/>
-                <Grid>
-                    <!-- content -->
-                </Grid>
-            </StackPanel>
-        </Border>
+
+        <StackPanel Margin="0">
+            <DockPanel Background="#383e42" Height="45">
+                <Label  Content="E V G" Foreground="#e8b809" FontWeight="Bold" FontFamily="Bahnschrift SemiBold" FontSize="24" 
+                        Height="40" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="20, 0, 0, 0"/>
+                <Label  Content="Carmanager Application" Foreground="#e8b809" FontWeight="Bold" FontFamily="Bahnschrift SemiBold" FontSize="24" 
+                        Height="40" HorizontalAlignment="Right" Margin="0, 0, 20, 0"/>
+            </DockPanel>
+            <DockPanel>
+                <ComboBox Name="cboMakes" Width="140" Margin="10" HorizontalAlignment="Left" SelectionChanged="cboMakes_SelectionChanged"/>
+                <ComboBox Name="cboModels" Width="140" Margin="10" HorizontalAlignment="Left" SelectionChanged="cboModels_SelectionChanged"/>
+                <TextBox Name="txtNumberPlate" Width="140" Height="25" Margin="10, 0, 10, 0" HorizontalAlignment="Left" KeyUp="txtVIN_KeyUp"/>
+                <Slider Name="sldMaxMilage" HorizontalAlignment="Left" Width="140" Height="25" Margin="10, 0, 0, 0"/>
+                <Slider Name="sldNextService" HorizontalAlignment="Left" Width="140" Height="25" Margin="10, 0, 0, 0"/>
+            </DockPanel>
+            <DockPanel>
+                <Button Name="btnAddReservation" Content="Reservieren"  Width="140" Height="25" Margin="10, 0, 0, 0" HorizontalAlignment="Left" IsEnabled="False" Click="btnAddReservation_Click"/>
+                <Label Content="Maximale Kilometerstand" HorizontalAlignment="Right" Margin="340, 0, 00, 0" Width="150"/>
+                <Label Content="Nächster Service" HorizontalAlignment="Right" Margin="0, 0, 60, 0" Width="100"/>
+            </DockPanel>
+            <Separator Height="5"/>
+            <Grid>
+                <ListBox Name="lstCars" Height="300" MouseDoubleClick="lstCars_DoubleClick" SelectionChanged="lstCars_SelectionChanged" Margin="0,15,0,-15"/>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

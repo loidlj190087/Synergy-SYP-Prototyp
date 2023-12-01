@@ -6,8 +6,6 @@ namespace CarPoolManager;
 public partial class MainWindow : Window
 {
     DatabaseContext _db;
-
-    public List<Car> Cars { get; set; } = new();
     public MainWindow() => InitializeComponent();
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -15,9 +13,8 @@ public partial class MainWindow : Window
         _db = new DatabaseContext();
         //_db.Database.EnsureDeleted();
         _db.Database.EnsureCreated();
-        cboMakes.ItemsSource = _db.Cars.Select(x => x.Make).OrderBy(x => x).ToList();
+        cboMakes.ItemsSource = _db.Cars.Select(x => x.Make).Distinct().OrderBy(x => x).ToList();
         cboMakes.SelectedIndex = 0;
-        FillGrdWithCars();
     }
 
 
@@ -49,99 +46,99 @@ public partial class MainWindow : Window
     {
         var lines = File.ReadAllLines(@".\csv\bookings.csv").Skip(1);
 
-        foreach(var line in lines)
+        foreach (var line in lines)
         {
             var parts = line.Split(",");
 
-            
-                var booking = new Booking()
-                {
-                    StartDate = DateTime.ParseExact(parts[0].Trim(), "M/d/yyyy", null),
-                    EndDate = DateTime.ParseExact(parts[1].Trim(), "M/d/yyyy", null),
-                    Description = parts[2],
-                    CarId = int.Parse(parts[3]),
-                };
 
-                _db.Bookings.Add(booking); _db.SaveChanges();
+            var booking = new Booking()
+            {
+                StartDate = DateTime.ParseExact(parts[0].Trim(), "M/d/yyyy", null),
+                EndDate = DateTime.ParseExact(parts[1].Trim(), "M/d/yyyy", null),
+                Description = parts[2],
+                CarId = int.Parse(parts[3]),
+            };
+
+            _db.Bookings.Add(booking); _db.SaveChanges();
         }
-        
+
     }
     #endregion
 
-    public void FillGrdWithCars()
+    private void cboMakes_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
     {
-        
+        cboModels.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem).Select(x => x.Model).Distinct().OrderBy(x => x).ToList();
+        cboModels.SelectedIndex = 0;
+        if (txtNumberPlate.Text.Trim().Length > 0)
+        {
+            lstCars.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem)
+                .Where(x => x.Model == cboModels.SelectedItem)
+                .Where(x => x.NumberPlate.Contains(txtNumberPlate.Text.Trim()))
+                .Distinct().OrderBy(x => x).ToList();
+        }
+        else
+        {
+            lstCars.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem)
+                    .Where(x => x.Model == cboModels.SelectedItem)
+                    .Distinct().OrderBy(x => x).ToList();
+        }
     }
 
-    //public void FillGrdWithCars()
-    //{
+    private void cboModels_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+    {
+        if (txtNumberPlate.Text.Trim().Length > 0)
+        {
+            lstCars.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem)
+                .Where(x => x.Model == cboModels.SelectedItem)
+                .Where(x => x.NumberPlate.Contains(txtNumberPlate.Text.Trim()))
+                .Distinct().OrderBy(x => x).ToList();
+        }
+        else
+        {
+            lstCars.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem)
+                    .Where(x => x.Model == cboModels.SelectedItem)
+                    .Distinct().OrderBy(x => x).ToList();
+        }
+    }
 
-    //    var numberplates = _db.Cars.Select(x => x.NumberPlate).ToList();
+    private void lstCars_DoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        Window window2 = new Window();
+        window2.Show();
+    }
 
+    private void txtVIN_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+    {
+        if (txtNumberPlate.Text.Trim().Length > 0)
+        {
+            lstCars.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem)
+                .Where(x => x.Model == cboModels.SelectedItem)
+                .Where(x => x.NumberPlate.Contains(txtNumberPlate.Text.Trim()))
+                .Distinct().OrderBy(x => x).ToList();
+        }
+        else
+        {
+            lstCars.ItemsSource = _db.Cars.Where(x => x.Make == cboMakes.SelectedItem)
+                    .Where(x => x.Model == cboModels.SelectedItem)
+                    .Distinct().OrderBy(x => x).ToList();
+        }
+    }
 
+    private void lstCars_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+    {
+        if (lstCars.SelectedItem != null)
+        {
+            btnAddReservation.IsEnabled = true;
+        }
+        else
+        {
+            btnAddReservation.IsEnabled = false;
+        }
+    }
 
-    //    foreach(var number in numberplates)
-    //    {
-    //        grdCars.ItemsSource = _db.Bookings.
-    //      Where(x => x.Car.NumberPlate == number).ToList();
-    //    }
-
-
-      
-
-    //}
-
-
-    //public void SeedDatabase()
-    //{
-    //    _cars.Cars.Clear();
-    //    var lines = File.ReadAllLines("cars.csv").Skip(1);
-    //    Car car;
-    //    foreach (var line in lines)
-    //    {
-    //        var values = line.Split(',');
-    //        car = new Car()
-    //        {
-    //            Id = int.Parse(values[0]),
-    //            Make = values[1],
-    //            Model = values[2],
-    //            YearOfManufacture = values[3],
-    //            Color = values[4],
-    //            NumberPlate = values[5],
-    //            Milage = int.Parse(values[6])
-    //        };
-    //        Cars.Add(car);
-    //    }
-    //    _cars.Cars.AddRange(Cars);
-    //}
-
-    //private void txtId_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
-    //{
-    //    if (txtId.Text.Trim() == "") return;
-    //    dgrCars.ItemsSource = _cars.Cars.Where(x => x.Id == int.Parse(txtId.Text)).ToList();
-    //}
-
-    //private void cbbMakes_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    //{
-    //    cbbModel.ItemsSource = _cars.Cars.Where(x => x.Make == cbbMakes.SelectedItem).Select(x => x.Model).ToList();
-    //    cbbModel.SelectedIndex = 0;
-    //    dgrCars.ItemsSource = _cars.Cars.Where(x => x.Make == cbbMakes.SelectedItem).ToList();
-    //}
-
-    //private void cbbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    //{
-    //    dgrCars.ItemsSource = _cars.Cars.Where(x => x.Make == cbbMakes.SelectedItem).Where(x => x.Model == cbbModel.SelectedItem).ToList();
-    //}
-
-    //private void txtVIN_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
-    //{
-    //    if (txtNumberPlate.Text.Trim() == "") return;
-    //    dgrCars.ItemsSource = _cars.Cars.Where(x => x.NumberPlate == txtNumberPlate.Text).ToList();
-    //}
-
-    //private void sldMaxMilage_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-    //{
-    //    //if (_cars == null) return;
-    //    //dgrCars.ItemsSource = _cars.Cars.Where(x => x.Milage <= sldMaxMilage.Value).ToList();
-    //}
+    private void btnAddReservation_Click(object sender, RoutedEventArgs e)
+    {
+        Window window2 = new Window();
+        window2.Show();
+    }
 }

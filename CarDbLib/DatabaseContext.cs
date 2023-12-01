@@ -19,12 +19,8 @@ public class DatabaseContext : DbContext
     {
         if(!optionsBuilder.IsConfigured)
         {
-            string? dataDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string connectionString = @"server=(LocalDB)\mssqllocaldb;attachdbfilename=C:\Users\User\Documents\Schule\SYP\4C\CarPoolManager\CarBooking.mdf;database=CarBookingDb;integrated security=True;MultipleActiveResultSets=True;";
-            if (connectionString != null && connectionString.Contains("|DataDirectory|"))
-            {
-                connectionString = connectionString.Replace("|DataDirectory|", dataDirectory);
-            }
+
             optionsBuilder.UseSqlServer(connectionString);
         }
     }
