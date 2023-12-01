@@ -18,7 +18,7 @@ public class DatabaseContext : DbContext
     {
         if(!optionsBuilder.IsConfigured)
         {
-            string connectionString = @"server=(LocalDB)\mssqllocaldb;attachdbfilename=C:\Users\User\Documents\Schule\2023-24\Syp\Car_Pool_Manager\Synergy-SYP-Prototyp\CarBooking.mdf;database=CarBookingDb;integrated security=True;MultipleActiveResultSets=True;";
+            string connectionString = @"server=(LocalDB)\mssqllocaldb;attachdbfilename=|DataDirectory|CarBooking.mdf;database=CarBookingDb;integrated security=True;MultipleActiveResultSets=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
     }

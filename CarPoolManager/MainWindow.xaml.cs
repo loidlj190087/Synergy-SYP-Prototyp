@@ -6,7 +6,7 @@ namespace CarPoolManager;
 
 public partial class MainWindow : Window
 {
-    DatabaseContext _db;
+    DatabaseContext _db = new DatabaseContext();
 
     public List<Car> Cars { get; set; } = new();
     public MainWindow() => InitializeComponent();
