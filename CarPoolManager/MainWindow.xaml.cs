@@ -1,6 +1,9 @@
 ﻿using System.IO;
 using System.Windows;
+using System.Xml.Serialization;
 using CarDbLib;
+using Microsoft.Identity.Client;
+
 namespace CarPoolManager;
 
 public partial class MainWindow : Window
@@ -103,29 +106,11 @@ public partial class MainWindow : Window
 
     private void lstCars_DoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        
-        //Create  instance of CarDetailes window
+        CarDetails carDetailsWindow = new();
 
-        CarDetails carDetailsWindow = new CarDetails();
-
-        Car car = (Car)lstCars.SelectedItem;
-
-
-
-       carDetailsWindow.grdCarDetails.Items.Add(new
-       {
-           Id = car.Id,
-           Make = car.Make,
-           Model = car.Model,
-           YearOfManufacture = car.YearOfManufacture,
-           Color = car.Color,
-           NumberPlate = car.NumberPlate,
-           Milage = car.Milage,
-       });
-
-       carDetailsWindow.lstBookings.ItemsSource =
-           car.Bookings.ToList();
-
+        carDetailsWindow.Car = (Car) lstCars.SelectedItem;
+        carDetailsWindow.FillGrdView();
+        carDetailsWindow.FillLstBox();
 
 
         carDetailsWindow.Show();
