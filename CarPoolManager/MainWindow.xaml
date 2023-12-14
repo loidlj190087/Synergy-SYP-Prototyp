@@ -26,7 +26,7 @@
             <DockPanel>
                 <Button Name="btnAddReservation" Content="Reservieren"  Width="140" Height="25" Margin="10, 0, 0, 0" HorizontalAlignment="Left" IsEnabled="False" Click="btnAddReservation_Click"/>
                 <Label Content="Maximale Kilometerstand" HorizontalAlignment="Right" Margin="340, 0, 00, 0" Width="150"/>
-                <Label Content="Nächster Service" HorizontalAlignment="Right" Margin="0, 0, 60, 0" Width="100"/>
+                <Label Content="Nächster Service" HorizontalAlignment="Right" Margin="0, 0, 50, 0" Width="100"/>
             </DockPanel>
             <Separator Height="5"/>
             <Grid>

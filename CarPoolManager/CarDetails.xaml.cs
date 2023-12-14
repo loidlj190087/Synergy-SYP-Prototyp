@@ -21,7 +21,7 @@ namespace CarPoolManager
     /// </summary>
     public partial class CarDetails : Window
     {
-
+        DatabaseContext _db = new DatabaseContext(); 
         public Car Car { get; set; }
         public CarDetails()
         {
@@ -30,7 +30,7 @@ namespace CarPoolManager
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            //_db = new DatabaseContext();
         }
 
         public void FillGrdView()
@@ -57,7 +57,7 @@ namespace CarPoolManager
 
         public void FillLstBox()
         {
-            lstBookings.ItemsSource = Car.Bookings.ToList();
+            lstBookings.ItemsSource = _db.Bookings.Where(x => x.Id == Car.Id).ToList();
         }
     }
 }

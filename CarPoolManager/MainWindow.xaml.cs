@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Xml.Serialization;
 using CarDbLib;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 
 namespace CarPoolManager;
@@ -16,7 +17,7 @@ public partial class MainWindow : Window
         _db = new DatabaseContext();
         //_db.Database.EnsureDeleted();
         _db.Database.EnsureCreated();
-        cboMakes.ItemsSource = _db.Cars.Select(x => x.Make).Distinct().OrderBy(x => x).ToList();
+        cboMakes.ItemsSource = _db.Cars.Include(x => x.Bookings).Select(x => x.Make).Distinct().OrderBy(x => x).ToList();
         cboMakes.SelectedIndex = 0;
     }
 

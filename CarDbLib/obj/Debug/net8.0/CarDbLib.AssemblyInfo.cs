@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarDbLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4301fe94a1bbc8a475e4a362b926dc12b83e8c0c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a823973d5e9d2bbb49d65117f78ac45c823a1a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarDbLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarDbLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

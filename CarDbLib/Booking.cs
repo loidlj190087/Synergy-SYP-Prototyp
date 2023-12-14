@@ -17,6 +17,10 @@ namespace CarDbLib
         public Car Car { get; set; }
 
         public int CarId { get; set; }
-        
+
+        public override string? ToString()
+        {
+            return $"{Description}  von {StartDate} - {EndDate}";
+        }
     }
 }
