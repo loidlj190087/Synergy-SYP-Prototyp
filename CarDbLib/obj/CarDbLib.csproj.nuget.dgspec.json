@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {}
+    "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {
+    "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj",
         "projectName": "CarDbLib",
-        "projectPath": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

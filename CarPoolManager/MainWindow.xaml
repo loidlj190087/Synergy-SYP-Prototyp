@@ -19,8 +19,8 @@
             <DockPanel>
                 <ComboBox Name="cboMakes" Width="140" Margin="10" HorizontalAlignment="Left" SelectionChanged="cboMakes_SelectionChanged"/>
                 <ComboBox Name="cboModels" Width="140" Margin="10" HorizontalAlignment="Left" SelectionChanged="cboModels_SelectionChanged"/>
-                <TextBox Name="txtNumberPlate" Width="140" Height="25" Margin="10, 0, 10, 0" HorizontalAlignment="Left" KeyUp="txtVIN_KeyUp"/>
-                <Slider Name="sldMaxMilage" HorizontalAlignment="Left" Width="140" Height="25" Margin="10, 0, 0, 0"/>
+                <TextBox Name="txtNumberPlate" Width="140" Height="25" Margin="10, 0, 10, 0" HorizontalAlignment="Left" KeyUp="txtNumberPlate_KeyUp"/>
+                <Slider Name="sldMaxMilage" HorizontalAlignment="Left" Width="140" Height="25" Margin="10, 0, 0, 0" Minimum="0" Maximum="100000" Value="100000" ValueChanged="sldsldMaxMilage_ValueChanged"/>
                 <Slider Name="sldNextService" HorizontalAlignment="Left" Width="140" Height="25" Margin="10, 0, 0, 0"/>
             </DockPanel>
             <DockPanel>

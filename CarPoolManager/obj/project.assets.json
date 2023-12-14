@@ -3109,11 +3109,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
       "projectName": "CarPoolManager",
-      "projectPath": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarPoolManager\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarPoolManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3130,8 +3130,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj"
+            "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj"
             }
           }
         }
