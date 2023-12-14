@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JBVHwNJJU5uHn8K6S6/aOiT/7sVuwXbpGtjtM0lbgRE4+LkeR6ymdYyYb8AuN7LixlP/OSI1/hGXf6Ytnq6a+w==",
+  "dgSpecHash": "tLziG207LnVwBDgEMl4NNSfzjASVmufcLVyX/J4B4Wl56frUa/rU8ofWDc3QTlWhiT8mBJNsDLQdXJEfUaGQzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\CarPoolManager\\CarDbLib\\CarDbLib.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\Schule\\2023-24\\Syp\\CarPoolManager\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

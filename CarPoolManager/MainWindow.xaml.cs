@@ -103,8 +103,32 @@ public partial class MainWindow : Window
 
     private void lstCars_DoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        Window window2 = new Window();
-        window2.Show();
+        
+        //Create  instance of CarDetailes window
+
+        CarDetails carDetailsWindow = new CarDetails();
+
+        Car car = (Car)lstCars.SelectedItem;
+
+
+
+       carDetailsWindow.grdCarDetails.Items.Add(new
+       {
+           Id = car.Id,
+           Make = car.Make,
+           Model = car.Model,
+           YearOfManufacture = car.YearOfManufacture,
+           Color = car.Color,
+           NumberPlate = car.NumberPlate,
+           Milage = car.Milage,
+       });
+
+       carDetailsWindow.lstBookings.ItemsSource =
+           car.Bookings.ToList();
+
+
+
+        carDetailsWindow.Show();
     }
 
     private void txtVIN_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
