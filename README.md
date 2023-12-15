@@ -1,2 +1,2 @@
-# Synergy-SYP-Prototyp
-The Goal is to create a Prototyp for the diploma thesis
+# Synergy-SYP-Prototyp CarPoolManager in cooperation with EVGroup
+The aim of this project is to simplify and centralize the management of EVGs company cars
