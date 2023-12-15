@@ -1,4 +1,4 @@
-id,make,model,yearOfManufacture,color,numberplate,kilometers
+id,Manufacturer,model,yearOfManufacture,color,numberPlate,milage
 1,Chrysler,Cirrus,1995,Teal,2C3CK3CV6AH666586,76677
 2,Smart,Fortwo,2009,Yellow,1FTEX1CM5DF454024,62678
 3,Plymouth,Grand Voyager,1995,Turquoise,1NXBU4EE8AZ275307,2926

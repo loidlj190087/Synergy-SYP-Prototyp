@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarPoolManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22291ef2e526277bf73a381fe7fde3d7f0c82720")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77f228437588889531137019eeccf6dca1f9659c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarPoolManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarPoolManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

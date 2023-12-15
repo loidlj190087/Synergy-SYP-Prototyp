@@ -1,0 +1,42 @@
+﻿ <Window x:Class="CarPoolManager.CreateCarWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         mc:Ignorable="d"
+         Title="CreateCarWindow" Height="450" Width="800"
+         Loaded="Window_Loaded">
+     <Grid>
+         <StackPanel>
+             <Label Content="Neues Auto anlegen" FontSize="25" FontFamily="Arial Rounded MT Bold" HorizontalAlignment="Center" />
+             <DockPanel Margin="0,20,0,0">
+                <Label Content="Hersteller:" Margin="200, 10, 35, 10"/>
+                 <TextBox Margin="10, 10, 300, 10" Name="txtMake"/>
+             </DockPanel>
+             <DockPanel>
+                 <Label Content="Model:" Margin="200, 10, 52, 10"/>
+                 <TextBox Margin="10, 10, 300, 10" Name="txtModel"/>
+             </DockPanel>
+             <DockPanel>
+                 <Label Content="Baujahr:" Margin="200, 10, 47, 10"/>
+                 <TextBox Margin="10, 10, 300, 10" Name="txtYearOfManufacture"/>
+             </DockPanel>
+             <DockPanel>
+                 <Label Content="Farbe:               " Margin="200, 10, 9, 10"/>
+                 <TextBox Margin="10, 10, 300, 10" Name="txtColor"/>
+             </DockPanel>
+             <DockPanel>
+                 <Label Content="Nummerntafel:" Margin="200, 10, 10, 10"/>
+                 <TextBox Margin="10, 10, 300, 10" Name="txtNumberPlate"/>
+             </DockPanel>
+             <DockPanel>
+                 <Label Content="Kilometerstand:" Margin="200, 10, 7, 10"/>
+                 <TextBox Margin="10, 10, 300, 10" Name="txtMilage"/>
+             </DockPanel>
+
+             <Button Height="30" Content="Neues Auto anlegen"
+                     Name="BtnAddVehicles" Margin="200, 10, 300, 10" 
+                     Click="BtnAddVehiclesOnClick"/>
+         </StackPanel>
+     </Grid>
+ </Window>

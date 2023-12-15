@@ -1,63 +1,26 @@
-﻿using CarDbLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿namespace CarPoolManager;
 
-namespace CarPoolManager
+public partial class CarDetails : Window
 {
-    /// <summary>
-    /// Interaction logic for CarDetails.xaml
-    /// </summary>
-    public partial class CarDetails : Window
+    private readonly DatabaseContext _db = new();
+    public Car Car { get; set; }
+    public CarDetails() => InitializeComponent();
+    private void Window_Loaded(object sender, RoutedEventArgs e) => _db.Database.EnsureCreated();
+
+    public void FillGrdView()
     {
-        DatabaseContext _db = new DatabaseContext(); 
-        public Car Car { get; set; }
-        public CarDetails()
+        var carDetails = new
         {
-            InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            //_db = new DatabaseContext();
-        }
-
-        public void FillGrdView()
-        {
-            if (Car == null) return;
-
-            List<Object> list = new List<Object>();
-
-            var carDetails = new
-            {
-                Id = Car.Id,
-                Make = Car.Make,
-                Model = Car.Model,
-                YearOfManufacture = Car.YearOfManufacture,
-                Color = Car.Color,
-                NumberPlate = Car.NumberPlate,
-                Milage = Car.Milage,
-            };
-
-            list.Add(carDetails);
-            grdCarDetails.ItemsSource = list;
-            //grdCarDetails.Items.Add(carDetails);
-        }
-
-        public void FillLstBox()
-        {
-            lstBookings.ItemsSource = _db.Bookings.Where(x => x.Id == Car.Id).ToList();
-        }
+            Car.Id,
+            Car.Make,
+            Car.Model,
+            Car.YearOfManufacture,
+            Car.Color,
+            Car.NumberPlate,
+            Car.Milage,
+        };
+        grdCarDetails.ItemsSource = new List<Object>() { carDetails };
     }
+
+    public void FillLstBox() => lstBookings.ItemsSource = _db.Bookings.Where(x => x.Id == Car.Id).ToList();
 }

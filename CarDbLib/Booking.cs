@@ -1,26 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿namespace CarDbLib;
 
-namespace CarDbLib
+public class Booking
 {
-    public class Booking
+    public required int Id { get; set; }
+    public required int CarId { get; set; }
+    public required DateTime StartDate{ get; set; }
+    public required DateTime EndDate { get; set; }
+    public required string Description { get; set; } = "";
+    public virtual Car Car { get; set; }
+
+    public override string? ToString()
     {
-
-        public int Id { get; set; }
-        public DateTime StartDate{ get; set; }
-        public DateTime EndDate { get; set; }
-        public string Description{ get; set; }
-        public Car Car { get; set; }
-
-        public int CarId { get; set; }
-
-        public override string? ToString()
-        {
-            return $"{Description}  von {StartDate} - {EndDate}";
-        }
+        return $"{Description}  von {StartDate} - {EndDate}";
     }
 }
