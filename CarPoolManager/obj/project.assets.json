@@ -3104,19 +3104,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\loidl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
+      "projectUniqueName": "C:\\Users\\loidl\\OneDrive - htl-grieskirchen.at\\Desktop\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
       "projectName": "CarPoolManager",
-      "projectPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarPoolManager\\obj\\",
+      "projectPath": "C:\\Users\\loidl\\OneDrive - htl-grieskirchen.at\\Desktop\\Synergy-SYP-Prototyp\\CarPoolManager\\CarPoolManager.csproj",
+      "packagesPath": "C:\\Users\\loidl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\loidl\\OneDrive - htl-grieskirchen.at\\Desktop\\Synergy-SYP-Prototyp\\CarPoolManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\loidl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3130,8 +3130,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\Schule\\SYP\\4C\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj"
+            "C:\\Users\\loidl\\OneDrive - htl-grieskirchen.at\\Desktop\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj": {
+              "projectPath": "C:\\Users\\loidl\\OneDrive - htl-grieskirchen.at\\Desktop\\Synergy-SYP-Prototyp\\CarDbLib\\CarDbLib.csproj"
             }
           }
         }
@@ -3140,11 +3140,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

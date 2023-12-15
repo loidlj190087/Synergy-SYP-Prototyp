@@ -116,7 +116,7 @@ namespace CarPoolManager {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CarPoolManager;V1.0.0.0;component/createcarwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CarPoolManager;component/createcarwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CreateCarWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
